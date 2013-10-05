@@ -114,3 +114,4 @@ default['buildbot']['status'] = [
     authz=#{node['buildbot']['status_authz']})"
 ]
 
+default['buildbot']['factories'] = {}

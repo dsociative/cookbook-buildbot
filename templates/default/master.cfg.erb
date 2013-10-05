@@ -55,3 +55,8 @@ c['status'] = [ <% @statuses.each do |status| %>
     <%= status %>,
 <% end %>]
 
+# BuildFactories
+<% @factories.each_pair do |factory_path,factory_class| %>
+from <%= factory_path %> import <%= factory_class %>
+<%= factory_class %>(c)
+<% end %>

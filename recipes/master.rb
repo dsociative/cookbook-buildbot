@@ -70,7 +70,8 @@ template master_cfg do
     :builders      => node['buildbot']['builders'],
     :steps         => node['buildbot']['steps'],
     :schedulers    => node['buildbot']['schedulers'],
-    :statuses      => node['buildbot']['status']
+    :statuses      => node['buildbot']['status'],
+    :factories     => node['buildbot']['factories']
   )
   notifies :run, resources(:execute => "Start the master"), :immediately
 end
